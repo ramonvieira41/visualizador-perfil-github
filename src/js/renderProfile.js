@@ -19,7 +19,7 @@ export function renderProfile(profileResult, reposData, userData) {
         <div class="profile-card">
             <img src="${userData.avatar_url}" alt="Avatar de ${userData.name}" class="profile-avatar">
             <div class="profile-info">
-                <h2>${userData.name}</h2>
+                <h2>${userData.name || 'Nome não disponível😥'}</h2>
                 <p>${userData.bio || 'Sem bio disponível😐'}</p>
             </div>
         </div>
