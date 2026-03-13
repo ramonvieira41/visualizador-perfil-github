@@ -151,7 +151,7 @@ main {
   gap: 2rem; /* Espaço entre a imagem e o texto */
   background: transparent;
   padding: 2rem 0;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .profile-avatar {
@@ -203,4 +203,59 @@ main {
 .profile-counters span {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.repositories-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.repository-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  padding: 1.25rem 1.5rem;
+  min-width: 240px;
+  max-width: 270px;
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.repository-card:hover {
+  box-shadow: 0 4px 16px 0 rgba(102,126,234,0.10);
+  border-color: #416ce4;
+}
+
+.repository-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #22223b;
+  word-break: break-word;
+}
+
+.repository-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.repository-stats span {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #4a4e69;
+  background: #f1f1f6;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  min-height: 1.7rem;
+  margin-bottom: 0.1rem;
 }
