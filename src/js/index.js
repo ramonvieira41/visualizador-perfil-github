@@ -5,7 +5,7 @@ const inputSearch = document.getElementById('input-search');
 const btnSearch = document.getElementById('btn-search');
 const profileResult = document.querySelector('.profile-results');
 
-btnSearch.addEventListener('click', async () => {
+async function handleSearch() {
     const userName = inputSearch.value;
     if (userName) {
         btnSearch.disabled = true;
@@ -24,5 +24,13 @@ btnSearch.addEventListener('click', async () => {
         }
     } else {
         alert('Por favor, digite um nome de usuário do GitHub.');
+    }
+}
+
+btnSearch.addEventListener('click', handleSearch);
+
+inputSearch.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+        handleSearch();
     }
 });
